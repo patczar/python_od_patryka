@@ -1,1 +1,1 @@
-print ('weekend weekendzik :) ')
+print ('weekend weekendzik   :) ')
