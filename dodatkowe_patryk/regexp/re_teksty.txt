@@ -1,0 +1,5 @@
+Ala ma pięć kotów i adres ala@warszawa.pl
+Ola mieszka pod kodem 02-333 Warszawa, data urodzenia 12 Feb 1995
+Ela ma maila ela@krakow.pl i 20 Sep 2001, kod pocztowy 31-100 Kraków
+Katarzyna pisze maile pod adres kasia@x.y.z.com i mieszka w 01-234 cośtam
+Jan ma datę z jedną cyfrą 3 May 2020.

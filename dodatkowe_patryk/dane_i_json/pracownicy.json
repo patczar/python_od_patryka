@@ -1,0 +1,38 @@
+[
+  {
+    "imie": "Konrad",
+    "nazwisko": "Ha\u0142as",
+    "rok_urodzenia": 1337,
+    "pensja": 1000.0
+  },
+  {
+    "imie": "Tomek",
+    "nazwisko": "Nowak",
+    "rok_urodzenia": 1980,
+    "pensja": 4000.0
+  },
+  {
+    "imie": "Asia",
+    "nazwisko": "Kowalska",
+    "rok_urodzenia": 1990,
+    "pensja": 6000.0
+  },
+  {
+    "imie": "Kasia",
+    "nazwisko": "Nowakowska",
+    "rok_urodzenia": 1999,
+    "pensja": 6000.0
+  },
+  {
+    "imie": "\"Hakuje\"Ten\"System",
+    "nazwisko": "Test",
+    "rok_urodzenia": 123,
+    "pensja": 123.0
+  },
+  {
+    "imie": "Nowy",
+    "nazwisko": "Nowak",
+    "rok_urodzenia": 1233,
+    "pensja": 1233.0
+  }
+]
