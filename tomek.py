@@ -1,1 +1,1 @@
-print('tomek')
+print('tomek atomek')
