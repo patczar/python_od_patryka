@@ -40,7 +40,7 @@ print(b)
 
 print('\n' + '-'*80 + '\n')
 # Wyjaśnienie techniczne co robi Python podczas tworzenia obiektu.
-# Na o dzień tak się nie programuje:
+# Na co dzień tak się nie programuje:
 # 1. tworzę surowy, niezainicjowany obiekt
 d = Osoba.__new__(Osoba)
 

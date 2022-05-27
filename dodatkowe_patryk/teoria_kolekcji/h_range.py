@@ -65,7 +65,7 @@ for i in range(10, 0, -1):
 print("==============")
 
 # range jest "generatorem", to znaczy nie zawiera w sobie tych wszystkich liczb na raz, tylko potrafi je wygenerować
-# można bez problemu stworzyć zmienną z zakresem, któryc nie zmieściłby się w pamięci
+# można bez problemu stworzyć zmienną z zakresem, który nie zmieściłby się w pamięci
 mega_zakres = range(0, 1000_000_000_000)
 print(mega_zakres)
 
