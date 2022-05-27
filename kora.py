@@ -1,0 +1,1 @@
+print ('weekend weekendzik   :) ')
