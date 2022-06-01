@@ -1,16 +1,12 @@
 import subprocess
 
-KATALOG_PROJEKTU = '/home/patryk/PycharmProjects/kpython-20201026/src/'
+# W tej wersji włączymy opcję zbierania outputu - to pozwala odczytać output po zakończeniu procesu.
 
-print('Zaraz zacznę')
+# Wyjście programu jest zapamiętywane w RAM, a potem można to odczytać.
 
-result = subprocess.run(['find', KATALOG_PROJEKTU, '-name', '*.py'],
-                        stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-output = result.stdout
-tekst = output.decode()
-linie = tekst.splitlines(keepends=False)
+result = subprocess.run(['find', '..', '-name', '*.py'], capture_output=True)
 
-for linia in linie:
-    print('*', linia)
-
-print('Gotowe')
+print('Proces zakończony kodem', result.returncode)
+print('Output:')
+print(result.stdout)
+# decode ?

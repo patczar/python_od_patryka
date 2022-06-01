@@ -1,9 +1,13 @@
-from subprocess import call
+import subprocess
 
-KATALOG_PROJEKTU = '/home/patryk/PycharmProjects/kpython-20201026/src/'
+print('Początek Pythona')
 
-print('Zaraz zacznę')
+# Program bez żadnych argumentów można uruchomić tak:
+subprocess.run('ls')
+#subprocess.run('kcalc')
+#subprocess.run('calc.exe')
 
-call(['find', KATALOG_PROJEKTU, '-name', '*.py'])
+# W tej wersji program wypisuje swoje wyśjcie na standardowe wyjście tego procesu Pythona.
+# (Python nie przechwytuje wyjścia tego procesu, tylko "wypuszcza je na zewnątrz").
 
-print('Gotowe')
+print('Koniec Pythona')

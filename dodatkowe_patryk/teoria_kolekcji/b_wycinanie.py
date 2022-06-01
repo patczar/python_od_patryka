@@ -36,6 +36,7 @@ print('l[20:25]', l[20:25])
 print('l[-8:-6]', l[-8:-6])
 print('l[2:4]', l[2:4])
 print('l[-8:6]',  l[-8:6])
+print('l[8:3]',  l[8:3])
 print()
 
 # trzeci parametr składni "przedziałowej" / "slices" oznacza wielkość kroku
@@ -51,6 +52,14 @@ print('l[::2]', l[::2]) # wypisz wszystkie pozycje parzyste
 # elementy od początku do 4
 print('l[:5]', l[:5])
 print('l[:5:]', l[:5:]) # równoważne powyższemu
+
+# od 5 do końca
+print('l[5:]', l[5:])
+print()
+
+print('l[:]', l[:])
+print('l[::]', l[::])
+print()
 
 # Gdy krok jest ujemny, to przeglądamy elementy w odwrotnej kolejności
 print('l[8:2:-2]', l[8:2:-2]) # 8 6 4
@@ -94,14 +103,19 @@ print(lista[5:6]) # ['Trójmiasto']
 # zastąp wycinek o długości jeden tymi trzema elementami
 # zastępuje Trójmiasto tymi trzema miastami
 lista[5:6] = ['Gdańsk', 'Sopot', 'Gdynia']
+# ze słownika wzięłoby klucze
+# lista[5:6] = {'GdańsK': 10, 'SopoT': 20, 'Gdynia': 30}
 # trzy_miasta = ['Gdańsk', 'Sopot', 'Gdynia']
 # lista[5:6] = trzy_miasta
 print(lista)
 
-# Usunie elementy
+# Usunie elementy Wrocław i Poznań
 lista[3:6] = []
 print(lista)
 
 # Można też deletować zakresy:
 del lista [1:4]
 print(lista)
+
+#txt = 'ABCDEF'
+#txt[1:2] = 'XY'

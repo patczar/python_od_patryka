@@ -1,26 +1,37 @@
-# Funkcja poczatek_i_koniec jest "funkcją wyższego rzędu", tzn.
-# jako parameter przyjmuje i jako wynik zwraca inną funkcję.
-# Operuje na funkcjach, a nie na zwykłych wartościach.
-
-# Funkcja poczatek_i_koniec jako parametr przyjmuje pewną funkcję bezargumentową.
-# W wyniku zwraca zmienioną funkcję, która działa tak jak f, ale dodatkowo na początku
-# i na końcu swojego działania wypisuje POCZATEK i KONIEC.
-def poczatek_i_koniec(f):
+def rodzynki(przepis):
     def zmieniona_funkcja():
-        print('POCZATEK')
-        f()
-        print('KONIEC')
+        przepis()
+        print('I jeszcze dodaj rodzynki!')
 
     return zmieniona_funkcja
 
-def powitaj():
-    print('Witamy serdecznie')
+def sernik_klasyczny():
+    print('Weź zmielony twaróg')
+    print('Dodaj cukier i aromaty')
+    print('Oddzielnie przygotuj ciasto')
+    print('Połóż masę serową na ciasto')
 
-print('Normalne powitaj:')
-powitaj()
+
+# Tu wywołam orygonalną funkcję - bez rodzynek
+print('Normalny przepis:')
+sernik_klasyczny()
 print()
 
-zmienione_powitaj = poczatek_i_koniec(powitaj)
-print('Zmienione powitaj:')
-zmienione_powitaj()
+# Funkcja rodzynki bierze "normalną funkcję" i zwraca nową funkcję (inną wersję),
+# która na końcu wypisuje jeszcze tekst o rodzynkach.
+zmieniony_przepis = rodzynki(sernik_klasyczny)
+print('Zmieniony przepis:')
+zmieniony_przepis()
 print()
+
+# Właśnie taka funkcja jak "rodzynki", która zmienia inne funkcje, może byc używana jako dekorator.
+
+@rodzynki
+def sernik_brzoskwiniowy():
+    print('Weż masę serową')
+    print('Dodaj kawałki brzoswkiń')
+
+
+# Teraz pod nazwą sernik_brzoskwiniowy od razu jest wersja z rodzynkami
+print('Brzoskwiniowy:')
+sernik_brzoskwiniowy()

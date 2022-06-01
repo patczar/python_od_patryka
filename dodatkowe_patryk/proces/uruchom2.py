@@ -1,11 +1,16 @@
-from subprocess import call
+import subprocess
 
-KATALOG_PROJEKTU = '/home/patryk/PycharmProjects/kpython-20201026/src/'
+print('Początek Pythona')
 
-print('Zaraz zacznę')
+#ERR subprocess.run('ls -l')
 
-with open('stdout.txt', mode='wb') as wyjscie, open('stderr.txt', mode='wb') as bledy:
-    result = call(['find', KATALOG_PROJEKTU, '-name', '*.py'], stdout=wyjscie, stderr=bledy)
-    print('result:', result)
+# OK
+# Gdy uruchamiany program ma otrzymać parametry, to do run przekazujemy listę
+# gdzie na początku jest samo polecenie, a potem jego argumenty.
+subprocess.run(['ls', '-l'])
+print('--------')
 
-print('Gotowe')
+result = subprocess.run(['python', r'/home/patryk/PycharmProjects/pythonProject/p01_podstawy/hello.py'])
+
+print('Proces zakończony:', result)
+print('Kod zakończenia:', result.returncode)

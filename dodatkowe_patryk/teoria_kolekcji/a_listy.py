@@ -1,5 +1,9 @@
+# Listy są mutowalne (można je zmieniać)
+# Listy pamiętają kolejność elementów i można indeksować (listy są sekwencjami)
+
 imiona = ['Ala', 'Adam', 'Iwona', 'Kasia', 'Janusz']
 liczby = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
+miks = [123, 'Ala', 3.14, [3,2,1]]
 
 print(imiona)
 print(liczby)
@@ -44,15 +48,19 @@ print(imiona[2])
 # Można uzywać indeksów ujemnych - wtedy liczymy od końca.
 # -1 to ostatni element
 print(imiona[-1])
+# print(imiona[len-1])
 
 # Gdy wyjdziemy poza zakres listy ( >= rozmiar  albo < -rozmiar), to będzie wyjątek IndexError
 #ERR print(imiona[10])
 print()
 
+# Listy są mutowalne - zawartość list można modyfikować.
+
 # Zmiana elementu na określonej pozycji:
 print(imiona)
 imiona[0] = 'Alicja'
 imiona[3] = 'Katarzyna'
+# ale nie da się w ten sposób wpisać na nieistniejącą pozycję
 #ERR imiona[5] = 'Alojzy'
 print(imiona)
 
@@ -67,6 +75,7 @@ print(imiona)
 # Aby za jednym zamachem dodać wiele elementów, można uzyć extend
 inna_lista = ['Zuzia', 'Adrian', 'Bożena']
 imiona.extend(inna_lista)
+# imiona.append(inna_lista)
 print(imiona)
 print()
 
@@ -84,6 +93,7 @@ print('c:', c)
 # Aby w ten sposób zmodyfikować istniejącą listę, można użyć
 a += b
 print('a:', a, 'b:', b)
+# efekt analogiczny do extend
 
 print()
 # Usunięcie elementu z określonej pozycji. Dalsze elementy przesuwają się ← w lewo
@@ -98,7 +108,8 @@ print(imiona)
 # imiona.remove('Mikołaj')
 # print(imiona)
 
-# Aby sprawdzić, czy lista coś zawiera, uzywamy operatora in
+# Aby sprawdzić, czy lista coś zawiera, używamy operatora in
+# Przy czym dla listy jest to kosztowne - Python musi przejrzeć całą listę
 if 'Tomasz' in imiona:
     print('Lista zawiera imię Tomasz')
 else:
@@ -189,6 +200,14 @@ print()
 for i, imie in enumerate(imiona):
     print(f'{i} → {imie}')
 print()
+
+# Samo enumerate tworzy kolekcję par:
+print(enumerate(imiona))
+print(list(enumerate(imiona)))
+# w enumerate można podać numer początkowy
+print(list(enumerate(imiona, 11)))
+print()
+
 
 # Operacja zip na podstawie dwóch list tworzy listę par.
 # Typowe zastosowanie to pętla przechodząca jednocześnie po dwóch listach.

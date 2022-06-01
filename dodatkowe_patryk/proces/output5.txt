@@ -1649,6 +1649,3 @@
 ../p08_procesy/uruchom3.py
 ../p08_procesy/uruchom4.py
 ../p08_procesy/uruchom5.py
-../p08_procesy/kalkulator.py
-../p08_procesy/uruchom6.py
-../p08_procesy/uruchom7.py

@@ -44,16 +44,24 @@ parzyste = [2*x for x in range(50)]
 print(parzyste)
 
 # wyniki comprehencji można przekazywać od razu do funkcji takich jak sum
+# uwaga - to nie jest optymalny zapis - wyjaśnienie dalej w sekcji o generatorach
 suma_nieparzystych = sum([2*x+1 for x in range(10)])
 print(suma_nieparzystych)
 
+# można wprowadzić kilka zmiennych w kilku forach
 tabliczka = [x*y for x in range(1,11) for y in range(1,11)]
 print(tabliczka)
 print('Suma wszystkich liczb tabliczki mnożenia:', sum(tabliczka))
 print()
 
+tabliczka2d = [[x*y for x in range(1,11)] for y in range(1,11)]
+print(tabliczka2d)
+print()
+
 
 # Analogicznie: istnieją też set-comprehentions, dict-comprehentions
+print(list(range(-5, 6)))
+
 lista = [x*x for x in range(-5, 6)]
 print(type(lista))
 print(lista)
@@ -67,7 +75,8 @@ print(type(generator))
 print(generator)
 # Generator nie wylicza swoich wartości od razu i nie zawiera ich w sobie (jak lista),
 # jest tylko przepisem na to jak wyliczać wartości gdy będą potrzebne
-for y in generator: print(y, end=' ')
+for y in generator:
+    print(y, end=' ')
 print()
 
 # Dla słowników zapis jest taki:
