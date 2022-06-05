@@ -39,6 +39,7 @@ print()
 # co daje kolejne elementy zwracane przez yield, aż do StopIteration
 g = abc()
 print(g.__next__())
-print(g.__next__())
-print(g.__next__())
-print(g.__next__())
+# Istnieje globalna funkcja Pythona, która to robi i "ładniej" używać tej funkcji, niż wołać __next__
+print(next(g))
+print(next(g))
+print(next(g))
