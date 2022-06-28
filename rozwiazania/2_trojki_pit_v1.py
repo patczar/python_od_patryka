@@ -1,6 +1,6 @@
 limit = 500
 
-# Rozwiązanie mało wydajne wydajne.
+# Rozwiązanie mało wydajne.
 # Potęgowanie, nawet **2, działa wolniej od mnożenia.
 # W dodatku tutaj generujemy wszystkie możliwe kombinacje liczb i dopiero potem sprawdzamy warunkiem.
 lista = [(a, b, c)
