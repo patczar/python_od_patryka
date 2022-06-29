@@ -68,7 +68,7 @@ class Fraction:
 
     def __mod__(self, other: 'Fraction') -> 'Fraction':
         # Moja interpretacja co może znaczyć "reszta z dzielenia" dla ułamków. Zrealizowane za pomocą innych operacji.
-        return self - self // other
+        return self - other * (self // other)
 
     # Rzutowania na inne typy: float, int, bool
     def __float__(self) -> float:
